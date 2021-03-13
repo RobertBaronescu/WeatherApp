@@ -1,0 +1,54 @@
+.nav-link {
+  color: rgb(139, 0, 0) !important;
+  font-weight: bold;
+  &:hover {
+    color: rgb(58, 6, 6) !important;
+  }
+}
+
+.nav-list {
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+}
+
+.weather-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: transparent;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 991px) {
+  .home-locations {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list {
+    justify-content: flex-end;
+  }
+  .logo {
+    display: none;
+  }
+
+  .navbar-toggler {
+    background-color: #fff;
+  }
+
+  #navbarCollapse {
+    z-index: 10;
+  }
+
+  .weather-navbar {
+    padding-bottom: 33px !important;
+  }
+}

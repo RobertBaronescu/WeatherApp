@@ -1,0 +1,52 @@
+.location-single-container {
+  background-color: #f3f3f3;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100%;
+  padding-top: 71px;
+}
+
+.location-single-row {
+  height: 100%;
+}
+
+.left-section {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: inherit;
+}
+
+.location-title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: min-content;
+  width: 100%;
+  padding-bottom: 1.5rem;
+  font-weight: bolder;
+  color: #4e66f8;
+}
+
+.google-map {
+  margin-bottom: 3rem;
+}
+
+.weather-info {
+  width: 100%;
+}
+
+.weather-characteristic {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-info-single {
+  color: #868e96;
+}
+
+@media (min-width: 992px) {
+  .google-map {
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,46 @@
+.location-card {
+  height: 350px;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    transform: scale(1.05);
+  }
+}
+
+.location-image {
+  min-height: 80%;
+  object-fit: cover;
+  object-position: bottom;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+
+.card-title {
+  font-weight: bolder;
+  margin-top: 8px;
+  margin-left: 8px;
+  color: #373f50;
+  font-size: large;
+}
+
+.temp-wind {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.temperature {
+  color: rgb(139, 0, 0);
+  padding: 2px 4px;
+  font-size: larger;
+}
+
+.wind {
+  color: #4e54c8;
+  padding: 2px;
+  padding-left: 4px;
+  font-size: larger;
+}

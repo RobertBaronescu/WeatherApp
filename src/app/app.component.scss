@@ -1,0 +1,7 @@
+.main-content {
+  padding-top: 71px;
+}
+
+.main-content ::ng-deep #homepage {
+  padding-top: -71px;
+}

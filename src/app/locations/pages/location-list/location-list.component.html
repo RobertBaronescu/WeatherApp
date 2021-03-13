@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row locations-section">
+    <h6 class="check-out-cities">Check out all the cities</h6>
+    <h1 class="all-locations-title">All locations</h1>
+    <div
+      class="col-lg-12"
+      *ngFor="let location of locations; let index = index"
+      [ngClass]="{ 'col-xl-9': index % 6 === 0, 'col-xl-3': index % 6 !== 0 }"
+    >
+      <!-- I used the ngClass directive to add classes to the location card depending on their index, so this way every sixth one gets the col-xl-9 class -->
+      <!-- I passed the location as an input to the child component LocationCard -->
+      <app-location-card [location]="location"></app-location-card>
+    </div>
+  </div>
+</div>

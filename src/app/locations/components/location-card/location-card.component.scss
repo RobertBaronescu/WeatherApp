@@ -1,0 +1,30 @@
+.card {
+  width: 100%;
+  border: none;
+  height: 375px;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  &:hover {
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    transform: scale(1.003);
+  }
+}
+
+.location-title {
+  z-index: 3;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgb(0 0 0 / 10);
+
+  color: #ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.location-image {
+  height: 100%;
+  object-fit: cover;
+}
