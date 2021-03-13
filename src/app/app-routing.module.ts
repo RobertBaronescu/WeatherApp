@@ -4,8 +4,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { LocationsResolver } from './resolvers/locations.resolver';
 
 const routes: Routes = [
-
-  // This is the default path - 
   {
     path: '',
     component: HomeComponent,
@@ -13,7 +11,7 @@ const routes: Routes = [
       locations: LocationsResolver,
     },
   },
-  // The locations module is lazy loade because i wanted to reduce the load time and only load it if the user requests it.
+  // The locations module is lazy loaded in order to reduce the load time and initialize the module when the user accesses it.
   {
     path: 'locations',
     loadChildren: () =>

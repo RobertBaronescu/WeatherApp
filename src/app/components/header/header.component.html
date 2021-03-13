@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light weather-navbar">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light weather-navbar">
   <div class="container-fluid">
     <button
       class="navbar-toggler"
@@ -13,25 +13,10 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <img
-        src="../../../assets/logo/ef5d9434-4ecb-4815-89e6-e87c00147fda_200x200.png"
-        alt="Weather logo"
-        class="mr-3 logo"
-        style="height: 55px; width: 70px"
-      />
-      <ul class="navbar-nav nav-list">
-        <div class="d-flex home-locations">
-          <li class="nav-item active">
-            <a class="nav-link" routerLink="/"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/locations">Locations</a>
-          </li>
-        </div>
-      </ul>
+      <div class="header-section">
+        <h1 class="main-title" (click)="redirectToHomepage()">WEATHER</h1>
+        <a routerLink="/locations" class="locations-tab">Locations</a>
+      </div>
     </div>
   </div>
 </nav>

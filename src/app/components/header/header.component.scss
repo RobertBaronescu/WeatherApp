@@ -12,8 +12,42 @@
   align-items: center;
 }
 
+.header-section {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.main-title {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+  font-size: 900;
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+  }
+}
+
+.locations-tab {
+  position: absolute;
+  bottom: 1px;
+  font-weight: 900;
+}
+
 .weather-navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
@@ -25,7 +59,6 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background: transparent;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 991px) {
@@ -35,9 +68,6 @@
   }
   .nav-list {
     justify-content: flex-end;
-  }
-  .logo {
-    display: none;
   }
 
   .navbar-toggler {
@@ -50,5 +80,13 @@
 
   .weather-navbar {
     padding-bottom: 33px !important;
+  }
+}
+
+@media (min-width: 991px) {
+  .locations-tab {
+    position: absolute;
+    top: 10px;
+    right: 20px;
   }
 }

@@ -8,10 +8,14 @@ import { WeatherService } from '../services/weather.service';
 export class LocationsResolver implements Resolve<any> {
   constructor(private weatherService: WeatherService) {}
 
-  /*The resolve method get the current value from the locations$ stream and if there isn't any data on the stream then it calls the getWeather method
-  from the weatherService that i injected in the constructor above. If there is data on the stream which means the array of objects was emitted to it,
-  then it simply returns that data.
-  */
+  /* The purpose of this resolver is to cache the data provided by the API.   
+  We use a stream from weatherService to prevent any unnecessary repetition of the HTTP request as only a single data fetch is needed throughout the app.
+  
+  The resoning behing this is to always have the API called and its data available, whether the user navigates through the app or refreshes the page.
+  
+  The data brought by the API is stored in the locations$ stream. The resolver checks if data is available in the stream and provides that
+  data to the component that accesses the resolver, or if no such data is available it performs the API call.  */
+
   resolve() {
     const data = this.weatherService.locations$.getValue();
 

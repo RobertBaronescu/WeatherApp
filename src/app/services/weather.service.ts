@@ -8,15 +8,16 @@ import { map, tap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class WeatherService {
-  // Stream of data that we're going to subscribe to the last last value emitted.
+  // Stream of data that we're going to subscribe to the last value emitted.
   locations$: BehaviorSubject<Location[]> = new BehaviorSubject<Location[]>(
     null
   );
 
   constructor(private http: HttpClient) {}
 
-  /* Method that returns the data as a string so I parsed it and then i accessed the list property on that object, 
-  then i used a map function to construct an object of type Location so i can have an array of objects with the properties that i'm interested in.
+  /* Method that returns the data as a string so it was parsed and then the list property on that object was accessed.
+  The API itself returns an object with way more fields than it's required, so a parsing is needed in order to select only the properties that we're interested in.
+   An Array map() method is used to construct an array of objects of type Location.
   */
   getWeather(): Observable<any> {
     return this.http.get<string>('http://localhost:3000/').pipe(

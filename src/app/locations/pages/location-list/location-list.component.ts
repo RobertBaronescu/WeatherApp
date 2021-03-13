@@ -13,7 +13,7 @@ export class LocationListComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // I subscribed to the resovlver to get the data
+    // Subscription to the resovlver to get the data
 
     this.route.data.subscribe((data) => {
       this.locations = data.locations;

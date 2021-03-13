@@ -44,3 +44,9 @@
   padding-left: 4px;
   font-size: larger;
 }
+
+@media (max-width: 992px) {
+  .location-card {
+    margin-bottom: 35px;
+  }
+}
