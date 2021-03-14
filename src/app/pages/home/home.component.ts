@@ -14,7 +14,9 @@ export class HomeComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    /* Once the component is created, a subscription to the data from the resolver is made, which is sorted depending on the needs. 
+    /* Once the component is created, a subscription to the data from the resolver is made, which is sorted depending on the needs.
+    Objects are passed by reference, so the spread operator is used to clone the array from the locations property to ensure 
+    that the original array isn't affected by the sort() or the splice() method.   
     The hottestLocations array is sorted in descending order by temp property, showing only the top three results 
     because the Array splice() method was used on it to remove the items
     starting from the third index. The same thing was done to the coldestLocations array, but in ascending order.
