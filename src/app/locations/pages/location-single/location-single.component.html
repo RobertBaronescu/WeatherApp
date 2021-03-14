@@ -1,14 +1,16 @@
 <div class="container-fluid location-single-container">
   <div class="row location-single-row">
     <div class="col-lg-6 left-section">
-      <h1 class="location-title">{{ location?.name }}</h1>
-      <a
-        href="https://www.google.com/maps/@{{
-          this.location.coordinates.lat
-        }},{{ this.location.coordinates.lon }},10z"
-        target="_blank"
-        ><i class="far fa-eye"></i> View on Google Maps</a
-      >
+      <div class="title-maps">
+        <h1 class="location-title">{{ location?.name }}</h1>
+        <a
+          href="https://www.google.com/maps/@{{
+            this.location.coordinates.lat
+          }},{{ this.location.coordinates.lon }},10z"
+          target="_blank"
+          ><i class="far fa-eye"></i> View on Google Maps</a
+        >
+      </div>
       <div class="row weather-info">
         <div
           class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 weather-characteristic"
