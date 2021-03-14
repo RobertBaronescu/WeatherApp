@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from 'src/app/interfaces/location.interface';
 
 @Component({
@@ -11,7 +11,7 @@ export class LocationSingleComponent implements OnInit {
   location: Location;
   center: google.maps.LatLngLiteral;
   zoom = 10;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     /* The route for the LocationSingleComponent is /locations/:id (locationId) so the route object of type ActivatedRoute 

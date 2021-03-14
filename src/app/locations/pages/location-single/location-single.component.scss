@@ -13,8 +13,6 @@
 .left-section {
   padding: 3rem;
   display: flex;
-  justify-content: center;
-  text-align: center;
   flex-wrap: inherit;
 }
 
@@ -53,14 +51,13 @@
 
 .other-info-card {
   border-radius: 0.65rem;
-  background-color: #00a3ff;
-  color: darkslategray;
+  background-color: #f3f3f3;
+  color: #7e8299;
+  border: 1px solid #a1a5b7;
 }
 
 .card-body {
   display: flex;
-  justify-content: space-evenly;
-  text-align: center;
   align-items: center;
 }
 
@@ -81,7 +78,19 @@ ul {
 }
 
 .fa-wind {
-  color: #f3f3f3;
+  color: rgb(10, 10, 10);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+  }
 }
 
 @media (min-width: 992px) {

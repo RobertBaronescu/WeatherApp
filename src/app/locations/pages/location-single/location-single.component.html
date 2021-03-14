@@ -2,14 +2,23 @@
   <div class="row location-single-row">
     <div class="col-lg-6 left-section">
       <h1 class="location-title">{{ location?.name }}</h1>
-
+      <a
+        href="https://www.google.com/maps/@{{
+          this.location.coordinates.lat
+        }},{{ this.location.coordinates.lon }},10z"
+        target="_blank"
+        ><i class="far fa-eye"></i> View on Google Maps</a
+      >
       <div class="row weather-info">
         <div
           class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 weather-characteristic"
         >
           <div class="card weather-card">
             <div class="card-body">
-              <i class="fas fa-map-marker-alt" style="font-size: 30px"></i>
+              <i
+                class="fas fa-map-marker-alt"
+                style="font-size: 30px; margin-right: 15px"
+              ></i>
               <div>
                 <h5 class="card-title">Latitude</h5>
                 <p class="card-text">{{ location?.coordinates.lat }}°</p>
@@ -22,7 +31,10 @@
         >
           <div class="card weather-card">
             <div class="card-body">
-              <i class="fas fa-map-marked-alt" style="font-size: 30px"></i>
+              <i
+                class="fas fa-map-marked-alt"
+                style="font-size: 30px; margin-right: 15px"
+              ></i>
               <div>
                 <h5 class="card-title">Longitude</h5>
                 <p class="card-text">{{ location?.coordinates.lon }}°</p>
@@ -42,7 +54,8 @@
                 </li>
                 <li>
                   <span
-                    ><i class="fas fa-thermometer-half thermo"></i> Temperature</span
+                    ><i class="fas fa-thermometer-half thermo"></i>
+                    Temperature</span
                   >
                   <span>{{ location?.temp }}°C</span>
                 </li>
