@@ -4,9 +4,9 @@
       <div class="title-maps">
         <h1 class="location-title">{{ location?.name }}</h1>
         <a
-          href="https://www.google.com/maps/@{{
-            this.location.coordinates.lat
-          }},{{ this.location.coordinates.lon }},10z"
+          href="https://www.google.com/maps/search/?api=1&query={{
+            location.coordinates.lat
+          }},{{ location.coordinates.lon }}&z=10"
           target="_blank"
           ><i class="far fa-eye"></i> View on Google Maps</a
         >

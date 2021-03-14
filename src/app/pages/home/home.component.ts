@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from 'src/app/interfaces/location.interface';
 
 @Component({
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   hottestLocations: Location[];
   coldestLocations: Location[];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     /* Once the component is created, a subscription to the data from the resolver is made, which is sorted depending on the needs. 
@@ -31,5 +31,9 @@ export class HomeComponent implements OnInit {
       );
       this.coldestLocations.splice(3);
     });
+  }
+
+  redirectToAllLocations() {
+    this.router.navigate(['/locations']);
   }
 }
