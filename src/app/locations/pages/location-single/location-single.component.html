@@ -4,40 +4,67 @@
       <h1 class="location-title">{{ location?.name }}</h1>
 
       <div class="row weather-info">
-        <div class="col-xl-4 weather-characteristic">
-          <h4>{{ location?.coordinates.lon }}°</h4>
-          <span class="weather-info-single"><strong>Longitude</strong> </span>
+        <div
+          class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 weather-characteristic"
+        >
+          <div class="card weather-card">
+            <div class="card-body">
+              <i class="fas fa-map-marker-alt" style="font-size: 30px"></i>
+              <div>
+                <h5 class="card-title">Latitude</h5>
+                <p class="card-text">{{ location?.coordinates.lat }}°</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-xl-4 weather-characteristic">
-          <h4>{{ location?.temp_min }}°C</h4>
-          <span class="weather-info-single"
-            ><strong>Minimum temperature</strong>
-          </span>
-        </div>
-        <div class="col-xl-4 weather-characteristic">
-          <h4>{{ location?.coordinates.lat }}°</h4>
-          <span class="weather-info-single"><strong>Latitude</strong> </span>
+        <div
+          class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 weather-characteristic"
+        >
+          <div class="card weather-card">
+            <div class="card-body">
+              <i class="fas fa-map-marked-alt" style="font-size: 30px"></i>
+              <div>
+                <h5 class="card-title">Longitude</h5>
+                <p class="card-text">{{ location?.coordinates.lon }}°</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row weather-info">
-        <div class="col-xl-4 weather-characteristic">
-          <h4>{{ location?.temp }}°C</h4>
-          <span class="weather-info-single"><strong>Temperature</strong> </span>
-        </div>
-        <div class="col-xl-4 weather-characteristic">
-          <h4>{{ location?.wind_speed }} km/h</h4>
-          <span class="weather-info-single"
-            ><strong>Wind intensity</strong>
-          </span>
-        </div>
-        <div class="col-xl-4 weather-characteristic">
-          <h4>{{ location?.temp_max }}°C</h4>
-          <span class="weather-info-single"
-            ><strong>Maximum temperature</strong>
-          </span>
+        <div class="col-xl-12">
+          <div class="card other-info-card">
+            <div class="card-body">
+              <ul>
+                <li>
+                  <span><i class="fas fa-wind"></i> Wind speed</span>
+                  <span>{{ location?.wind_speed }} km/h</span>
+                </li>
+                <li>
+                  <span
+                    ><i class="fas fa-thermometer-half thermo"></i> Temperature</span
+                  >
+                  <span>{{ location?.temp }}°C</span>
+                </li>
+                <li>
+                  <span
+                    ><i class="fas fa-thermometer-empty thermo"></i> Minimum
+                    temperature</span
+                  >
+                  <span>{{ location?.temp_min }}°C</span>
+                </li>
+                <li>
+                  <span
+                    ><i class="fas fa-thermometer-full thermo"></i> Maximum
+                    temperature</span
+                  >
+                  <span>{{ location?.temp_max }}°C</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    
     </div>
     <div class="col-lg-6 google-map">
       <google-map height="100%" width="100%" [center]="center" [zoom]="zoom">

@@ -44,9 +44,85 @@
   color: #868e96;
 }
 
+.weather-card {
+  border-radius: 0.65rem;
+  background-color: #f1416c;
+  color: #f3f3f3;
+  height: 150px;
+}
+
+.other-info-card {
+  border-radius: 0.65rem;
+  background-color: #00a3ff;
+  color: darkslategray;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  width: 100%;
+  line-height: 45px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15rem;
+  }
+}
+
+.thermo {
+  color: rgb(139, 0, 0);
+}
+
+.fa-wind {
+  color: #f3f3f3;
+}
+
 @media (min-width: 992px) {
   .google-map {
     margin-bottom: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .location-single-container {
+    height: 1150px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .weather-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  li {
+    flex-direction: column;
+  }
+
+  .google-map {
+    height: 100px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    line-height: 35px;
+  }
+
+  .fas {
+    display: none;
   }
 }
